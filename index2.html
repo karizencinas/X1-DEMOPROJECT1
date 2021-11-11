@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+      <title>Bar</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <style>
+        body {
+            color: #fff;
+            font-family:Monospace;
+            font-size:13px;
+            margin: 0px;
+            text-align:center;
+            overflow: hidden;
+            
+        }
+        </style>
+</head>
+<div class="menu-container">
+    <div class="button">
+       Menu
+       <span class="fas fa-bars"></span>
+    </div>
+    <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="index2.html">Bar</a></li>
+       <li><a href="index3.html">Road</a></li>
+       <li><a href="#">Contact</a></li>
+       <li><a href="#">Feedback</a></li>
+    </ul>
+ </div>
+ <script>
+    $(document).ready(function(){
+      $('.button').click(function(){
+        if($(this).hasClass('expand')){
+          $('ul').slideUp(function(){
+            $('.button').removeClass('expand');
+            $('.fas').removeClass('expand')
+          });
+        }else{
+          $(this).addClass('expand');
+          setTimeout(function(){
+            $('.fas').addClass('expand');
+            $('ul').stop().slideDown();
+          },200);
+        }
+      });
+    });
+ </script>
+
+<video id="video" width="0.0" height="0.0" controls loop autoplay >
+<source src="videoplayback (3).mp4" type='video/mp4'>
+</video>
+
+<body>
+    <script src="three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="app2.js"></script>
+    <script src="three.js"></script>
+    <script ></script>
+
+    
+
+</body>
+
+</html>
